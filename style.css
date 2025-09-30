@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Background video exact fit */
+#bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* Show whole video */
+  background: black;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+/* Heart slideshow */
+.heart {
+  width: 35vw;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  animation: pulse 1.5s infinite;
+  transition: opacity 0.8s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Envelope (mail) */
+.mail {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 280px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.mail h3 {
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: crimson;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.btn:hover {
+  background: darkred;
+}
+
+/* Popup message */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  padding: 20px;
+}
+
+.popup.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-message {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 350px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+.popup-message h2 {
+  color: crimson;
+  font-size: 1.5rem;
+}
+
+.popup-message p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.close-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: crimson;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.close-btn:hover {
+  background: darkred;
+}
+
+/* Responsive for iPhone 13 */
+@media (max-width: 430px) {
+  .heart {
+    width: 45vw;
+    max-width: 160px;
+  }
+  .mail {
+    width: 90%;
+  }
+  .popup-message {
+    width: 95%;
+  }
+}

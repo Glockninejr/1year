@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Anniversary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay muted id="bg-video"></video>
+
+  <div class="content">
+    <!-- Heart Slideshow -->
+    <img src="heart1.png" alt="Heart" class="heart" id="heart-img">
+
+    <!-- Mail -->
+    <div class="mail">
+      <h3>You've got mail 💌</h3>
+      <button class="btn" onclick="openPopup(); enableSound()">Click to Open</button>
+    </div>
+  </div>
+
+  <!-- Popup Message -->
+  <div class="popup" id="popup">
+    <div class="popup-message">
+      <h2>❤️ Happy 1 Year & 9 Months Lovey ❤️</h2>
+      <p>Happy 1 year and 9 months, my Lovey! 💕
+Every single day with you has been such a blessing, and I’m so grateful that we’ve shared this beautiful journey together for almost 2 years now. Through all the laughs, little fights, and memories, you’ve made my life brighter and more meaningful. Thank you for always being there, for loving me, and for making me feel so special. I look forward to more months, more years, and a lifetime with you. Iloveyousomuch mwua mwua😚😚💖💕</p>
+      <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
